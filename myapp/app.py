@@ -10,6 +10,10 @@ socketio = SocketIO(app)
 def index():
     return "WebSocket Server is running!"
 
+@app.route('/test')
+def testmethod():
+    return "WebSocket Server is running!"
+    
 # WebSocket event listener for handling messages
 @socketio.on('message')
 def handle_message(message):
